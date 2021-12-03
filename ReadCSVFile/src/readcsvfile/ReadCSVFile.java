@@ -31,7 +31,7 @@ public class ReadCSVFile {
         int checker = 1;
         course = (String) JOptionPane.showInputDialog(
                 null,
-                "Which module? (CASE SENSITIVE!)\n ",
+                "Which module?\n ",
                 "Pick your module!",
                 JOptionPane.PLAIN_MESSAGE,
                 null,
@@ -44,21 +44,21 @@ public class ReadCSVFile {
             if (courseSimple == 1) { //for CS Students
             String moduleInput1 = (String) JOptionPane.showInputDialog(
                     null,
-                    "Which module? (CASE SENSITIVE!)\nNOTE: YOU ARE A COMPUTER SCIENCE STUDENT, YOUR COURSE IS WIA2001, THE REST ARE THE SAME",
+                    "Which module?\nNOTE: YOU ARE A COMPUTER SCIENCE STUDENT, YOUR COURSE IS WIA2001, THE REST ARE THE SAME",
                     "Inputting course code",
                     JOptionPane.INFORMATION_MESSAGE
             );
             module = moduleInput1.toUpperCase(); //to ensure everything the user inputs is capitalized
             if(module.equals("WIB2001")){ //to ensure the student wrote the correct course based on their respective departments.
                 JOptionPane.showMessageDialog(null, "I lit'rally told you to not put that.");
-            } else{ //if they typed correctly, the checker becomes 0, and it proceeds to show the course code and details.
+            } else{ //if they typed correctly, the checker becomes 0 , and it proceeds to show the course code and details.
                 checker = 0;
                 readRecord(module, filepath); //display the course details
             }
         } else { //for IT Students
             String moduleInput2 = (String) JOptionPane.showInputDialog(
                     null,
-                    "Which module? (CASE SENSITIVE!)\nNOTE: YOU ARE AN INFORMATION TECHNOLOGY STUDENT, YOUR COURSE IS WIB2001, THE REST ARE THE SAME",
+                    "Which module?\nNOTE: YOU ARE AN INFORMATION TECHNOLOGY STUDENT, YOUR COURSE IS WIB2001, THE REST ARE THE SAME",
                     "Inputting course code",
                     JOptionPane.INFORMATION_MESSAGE
             );
