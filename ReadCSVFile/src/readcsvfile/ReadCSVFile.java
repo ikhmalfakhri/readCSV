@@ -20,12 +20,12 @@ public class ReadCSVFile {
     public static void main(String[] args) {
         String filepath = "src\\Book1.csv";
         String[] courses = {
-            "Backelor of Computer Science (Computer Systems and Networking)",
-            "Backelor of Computer Science (Artificial Intelligence)",
-            "Backelor of Computer Science (Information Systems)",
-            "Backelor of Computer Science (Software Engineering)",
-            "Backelor of Information Technology (Multimedia)",
-            "Backelor of Information Technology (Data Science)"
+            "Bachelor of Computer Science (Computer Systems and Networking)",
+            "Bachelor of Computer Science (Artificial Intelligence)",
+            "Bachelor of Computer Science (Information Systems)",
+            "Bachelor of Computer Science (Software Engineering)",
+            "Bachelor of Information Technology (Multimedia)",
+            "Bachelor of Information Technology (Data Science)"
         }; //storage of all courses
         String module, course;
         int checker = 1;
@@ -110,13 +110,13 @@ public class ReadCSVFile {
     public static int simplifiedCourse(String course) { //to simplify distinguishability between CS students and IT students. 1 for CS students, 0 for IT students.
 
         int simplifiedCourse = switch (course) {
-            case "Backelor of Computer Science (Computer Systems and Networking)" ->
+            case "Bachelor of Computer Science (Computer Systems and Networking)" ->
                 1;
-            case "Backelor of Computer Science (Artificial Intelligence)" ->
+            case "Bachelor of Computer Science (Artificial Intelligence)" ->
                 1;
-            case "Backelor of Computer Science (Information Systems)" ->
+            case "Bachelor of Computer Science (Information Systems)" ->
                 1;
-            case "Backelor of Computer Science (Software Engineering)" ->
+            case "Bachelor of Computer Science (Software Engineering)" ->
                 1;
             default ->
                 0;
