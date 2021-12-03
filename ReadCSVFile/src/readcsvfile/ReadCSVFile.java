@@ -42,13 +42,13 @@ public class ReadCSVFile {
 
         while(checker!=0){ //so that the user doesn't have to always run the program again
             if (courseSimple == 1) { //for CS Students
-            String moduleInput = (String) JOptionPane.showInputDialog(
+            String moduleInput1 = (String) JOptionPane.showInputDialog(
                     null,
                     "Which module? (CASE SENSITIVE!)\nNOTE: YOU ARE A COMPUTER SCIENCE STUDENT, YOUR COURSE IS WIA2001, THE REST ARE THE SAME",
                     "Inputting course code",
                     JOptionPane.INFORMATION_MESSAGE
             );
-            module = moduleInput.toUpperCase(); //to ensure everything the user inputs is capitalized
+            module = moduleInput1.toUpperCase(); //to ensure everything the user inputs is capitalized
             if(module.equals("WIB2001")){ //to ensure the student wrote the correct course based on their respective departments.
                 JOptionPane.showMessageDialog(null, "I lit'rally told you to not put that.");
             } else{ //if they typed correctly, the checker becomes 0, and it proceeds to show the course code and details.
@@ -56,12 +56,13 @@ public class ReadCSVFile {
                 readRecord(module, filepath); //display the course details
             }
         } else { //for IT Students
-            module = (String) JOptionPane.showInputDialog(
+            String moduleInput2 = (String) JOptionPane.showInputDialog(
                     null,
                     "Which module? (CASE SENSITIVE!)\nNOTE: YOU ARE AN INFORMATION TECHNOLOGY STUDENT, YOUR COURSE IS WIB2001, THE REST ARE THE SAME",
                     "Inputting course code",
                     JOptionPane.INFORMATION_MESSAGE
             );
+            module = moduleInput2.toUpperCase();
             if(module.equals("WIA2001")){
                 JOptionPane.showMessageDialog(null, "I lit'rally told you to not put that.");
             } else{
