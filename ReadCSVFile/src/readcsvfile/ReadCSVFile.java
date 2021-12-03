@@ -51,7 +51,7 @@ public class ReadCSVFile {
             module = moduleInput1.toUpperCase(); //to ensure everything the user inputs is capitalized
             if(module.equals("WIB2001")){ //to ensure the student wrote the correct course based on their respective departments.
                 JOptionPane.showMessageDialog(null, "I lit'rally told you to not put that.");
-            } else{ //if they typed correctly, the checker becomes 0, and it proceeds to show the course code and details.
+            } else{ //if they typed correctly, the checker becomes 0 , and it proceeds to show the course code and details.
                 checker = 0;
                 readRecord(module, filepath); //display the course details
             }
