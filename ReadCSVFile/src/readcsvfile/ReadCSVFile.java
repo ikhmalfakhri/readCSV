@@ -52,8 +52,7 @@ public class ReadCSVFile {
             if(module.equals("WIB2001")){ //to ensure the student wrote the correct course based on their respective departments.
                 JOptionPane.showMessageDialog(null, "I lit'rally told you to not put that.");
             } else{ //if they typed correctly, the checker becomes 0 , and it proceeds to show the course code and details.
-                checker = 0;
-                readRecord(module, filepath); //display the course details
+                checker = readRecord(module, filepath); //display the course details
             }
         } else { //for IT Students
             String moduleInput2 = (String) JOptionPane.showInputDialog(
@@ -66,8 +65,7 @@ public class ReadCSVFile {
             if(module.equals("WIA2001")){
                 JOptionPane.showMessageDialog(null, "I lit'rally told you to not put that.");
             } else{
-                checker = 0;
-                readRecord(module, filepath); //display the course details
+                checker = readRecord(module, filepath); //display the course details
             }
         }
         }
@@ -75,7 +73,7 @@ public class ReadCSVFile {
 
     }
 
-    public static void readRecord(String module, String filePath) { //to read the csv file
+    public static int readRecord(String module, String filePath) { //to read the csv file
         boolean found = false; //to check if the desired keyword is found within the csv file
         String moduleCode = "";
         String creditHour = "";
@@ -98,12 +96,15 @@ public class ReadCSVFile {
 
             if (found) {
                 JOptionPane.showMessageDialog(null, "Module Code: " + moduleCode + "\nCredits: " + creditHour + "\nNo. of Occ: " + noOcc + "\nActivity Type: " + activityType);
+                return 0;
             } else {
                 JOptionPane.showMessageDialog(null, "Module does not exist.");
+                return 1;
             }
 
         } catch (HeadlessException | FileNotFoundException e) {
             System.out.println(e);
+            return 1;
         }
     }
 
@@ -123,5 +124,4 @@ public class ReadCSVFile {
         };
         return simplifiedCourse;
     }
-
 }
