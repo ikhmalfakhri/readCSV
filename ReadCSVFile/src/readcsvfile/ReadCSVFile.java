@@ -13,7 +13,9 @@ import javax.swing.JOptionPane;
  *
  * @author Faris Faiz
  * 
- * ikhmal
+ * ikhmal is the source of our problems
+ *
+ * Tasneem
  */
 public class ReadCSVFile {
 
